@@ -196,7 +196,7 @@
   <a href="mailto:inbox@email.com" target="_blank"></a>
 </template>
 
-<template id="password-inputs-can-be-pasted-into">
+<template id="paste-preventing-inputs">
   <!-- FAIL - calls preventDefault on event -->
   <input type="password" onpaste="event.preventDefault();" />
   <!-- PASS -->
@@ -363,8 +363,8 @@ function noRelOpenLinksTest() {
   stampTemplate('noopener-links-tmpl', document.body);
 }
 
-function passwordInputsCanBePastedIntoTest() {
-  stampTemplate('password-inputs-can-be-pasted-into', document.body);
+function inputsCanBePastedIntoTest() {
+  stampTemplate('paste-preventing-inputs', document.body);
 }
 
 
@@ -407,7 +407,7 @@ if (location.search === '') {
   noRelOpenLinksTest();
   // oldCSSFlexboxTest();
   deprecationsTest();
-  passwordInputsCanBePastedIntoTest();
+  inputsCanBePastedIntoTest();
   isOnHttps();
   noUnloadListenersTest();
 } else {
@@ -442,7 +442,7 @@ if (location.search === '') {
     deprecationsTest();
   }
   if (params.has('passwordinputs')) {
-    passwordInputsCanBePastedIntoTest();
+    inputsCanBePastedIntoTest();
   }
   if (params.has('isonhttps')) {
     isOnHttps();
