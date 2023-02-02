@@ -240,39 +240,28 @@ describe('ReportUIFeatures', () => {
 
         before(() => {
           // Setup entity-classification with recognized entities first.
-          lhrJson.entities = {
-            firstParty: 'example.com',
-            list: [
-              {
-                name: 'example.com',
-                isFirstParty: true,
-                isUnrecognized: true,
-              },
-              {
-                name: 'cdn.com',
-                isUnrecognized: true,
-              },
-              {
-                name: 'notexample.com',
-                isUnrecognized: true,
-              },
-              {
-                name: 'google.com',
-              },
-            ],
-            entityIndexByOrigin: {
-              'http://www.example.com': 0,
-              'http://www.cdn.com': 1,
-              'http://www.notexample.com': 2,
-              'http://www.google.com': 3,
+          lhrJson.entities = [
+            {
+              name: 'example.com',
+              isFirstParty: true,
+              isUnrecognized: true,
+              origins: ['http://www.example.com'],
             },
-            entityIndexByName: {
-              'example.com': 0,
-              'cdn.com': 1,
-              'notexample.com': 2,
-              'google.com': 3,
+            {
+              name: 'cdn.com',
+              isUnrecognized: true,
+              origins: ['http://www.cdn.com'],
             },
-          };
+            {
+              name: 'notexample.com',
+              isUnrecognized: true,
+              origins: ['http://www.notexample.com'],
+            },
+            {
+              name: 'google.com',
+              origins: ['http://www.google.com'],
+            },
+          ];
 
           // Entity resolution is done during prepareReportResult
           const result = ReportUtils.prepareReportResult(lhrJson);

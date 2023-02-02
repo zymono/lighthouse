@@ -109,11 +109,11 @@ class ReportUtils {
 
   /**
    * Mark TableItems/OpportunityItems with entity names.
-   * @param {LH.Result.Entities|undefined} entityClassification
+   * @param {LH.Result.Entities|undefined} entities
    * @param {import('../../types/lhr/audit-result').Result} audit
    */
-  static classifyEntities(entityClassification, audit) {
-    if (!entityClassification) return;
+  static classifyEntities(entities, audit) {
+    if (!entities) return;
     if (audit.details?.type !== 'opportunity' && audit.details?.type !== 'table') {
       return;
     }
@@ -130,17 +130,15 @@ class ReportUtils {
       const url = urlLocatorFn(item);
       if (!url) continue;
 
-      let origin;
+      let origin = '';
       try {
         // Non-URLs can appear in valueType: url columns, like 'Unattributable'
         origin = Util.parseURL(url).origin;
       } catch {}
       if (!origin) continue;
 
-      const entityIndex = entityClassification.entityIndexByOrigin[origin];
-      if (entityIndex === undefined) return;
-      const entity = entityClassification.list[entityIndex];
-      item.entity = entity.name;
+      const entity = entities.find(e => e.origins.includes(origin));
+      if (entity) item.entity = entity.name;
     }
   }
 
