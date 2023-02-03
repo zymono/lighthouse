@@ -227,6 +227,10 @@ async function _navigation(navigationContext) {
   };
 
   const setupResult = await _setupNavigation(navigationContext);
+
+  const disableAsyncStacks =
+    await prepare.enableAsyncStacks(navigationContext.driver.defaultSession);
+
   await collectPhaseArtifacts({phase: 'startInstrumentation', ...phaseState});
   await collectPhaseArtifacts({phase: 'startSensitiveInstrumentation', ...phaseState});
   const navigateResult = await _navigate(navigationContext);
@@ -244,6 +248,12 @@ async function _navigation(navigationContext) {
 
   await collectPhaseArtifacts({phase: 'stopSensitiveInstrumentation', ...phaseState});
   await collectPhaseArtifacts({phase: 'stopInstrumentation', ...phaseState});
+
+  // bf-cache-failures can emit `Page.frameNavigated` at the end of the run.
+  // This can cause us to issue protocol commands after the target closes.
+  // We should disable our `Page.frameNavigated` handlers before that.
+  await disableAsyncStacks();
+
   await _cleanupNavigation(navigationContext);
 
   return _computeNavigationResult(navigationContext, phaseState, setupResult, navigateResult);
