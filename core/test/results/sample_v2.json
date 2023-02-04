@@ -2151,7 +2151,7 @@
         "headings": [
           {
             "key": "entity",
-            "valueType": "link",
+            "valueType": "text",
             "label": "Third-Party",
             "subItemsHeading": {
               "key": "url",
@@ -2182,11 +2182,7 @@
             "mainThreadTime": 35.64800000000001,
             "blockingTime": 0,
             "transferSize": 30346,
-            "entity": {
-              "type": "link",
-              "text": "Google CDN",
-              "url": "https://developers.google.com/speed/libraries/"
-            },
+            "entity": "Google CDN",
             "subItems": {
               "type": "subitems",
               "items": [
