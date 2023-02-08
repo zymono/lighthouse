@@ -1787,8 +1787,8 @@
               "items": []
             }
           },
-          "preload-lcp-image": {
-            "id": "preload-lcp-image",
+          "prioritize-lcp-image": {
+            "id": "prioritize-lcp-image",
             "title": "Preload Largest Contentful Paint image",
             "description": "If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/optimize-lcp/#optimize-when-the-resource-is-discovered).",
             "score": 1,
@@ -3319,7 +3319,7 @@
                   "unminified-css",
                   "unused-css-rules",
                   "largest-contentful-paint-element",
-                  "preload-lcp-image",
+                  "prioritize-lcp-image",
                   "unused-javascript",
                   "efficient-animated-content",
                   "total-byte-weight",
@@ -3446,7 +3446,7 @@
                 "weight": 0
               },
               {
-                "id": "preload-lcp-image",
+                "id": "prioritize-lcp-image",
                 "weight": 0
               },
               {
@@ -4216,7 +4216,7 @@
               "uses-text-compression": "Enable compression on your Next.js server. [Learn more](https://nextjs.org/docs/api-reference/next.config.js/compression).",
               "uses-responsive-images": "Use the `next/image` component to set the appropriate `sizes`. [Learn more](https://nextjs.org/docs/api-reference/next/image#sizes).",
               "user-timings": "Consider using `Next.js Analytics` to measure your app's real-world performance. [Learn more](https://nextjs.org/docs/advanced-features/measuring-performance).",
-              "preload-lcp-image": "Use the `next/image` component and set \"priority\" to true to preload LCP image. [Learn more](https://nextjs.org/docs/api-reference/next/image#priority).",
+              "prioritize-lcp-image": "Use the `next/image` component and set \"priority\" to true to preload LCP image. [Learn more](https://nextjs.org/docs/api-reference/next/image#priority).",
               "unsized-images": "Use the `next/image` component to make sure images are always sized appropriately. [Learn more](https://nextjs.org/docs/api-reference/next/image#width)."
             }
           }
@@ -5359,7 +5359,7 @@
             },
             {
               "startTime": 111,
-              "name": "lh:audit:preload-lcp-image",
+              "name": "lh:audit:prioritize-lcp-image",
               "duration": 1,
               "entryType": "measure"
             },
@@ -6276,7 +6276,7 @@
               "audits[network-server-latency].details.headings[0].label",
               "audits[long-tasks].details.headings[0].label",
               "audits[unsized-images].details.headings[1].label",
-              "audits[preload-lcp-image].details.headings[1].label",
+              "audits[prioritize-lcp-image].details.headings[1].label",
               "audits[total-byte-weight].details.headings[0].label",
               "audits[legacy-javascript].details.headings[0].label"
             ],
@@ -6625,14 +6625,14 @@
             "core/audits/valid-source-maps.js | description": [
               "audits[valid-source-maps].description"
             ],
-            "core/audits/preload-lcp-image.js | title": [
-              "audits[preload-lcp-image].title"
+            "core/audits/prioritize-lcp-image.js | title": [
+              "audits[prioritize-lcp-image].title"
             ],
-            "core/audits/preload-lcp-image.js | description": [
-              "audits[preload-lcp-image].description"
+            "core/audits/prioritize-lcp-image.js | description": [
+              "audits[prioritize-lcp-image].description"
             ],
             "core/lib/i18n/i18n.js | columnWastedBytes": [
-              "audits[preload-lcp-image].details.headings[2].label",
+              "audits[prioritize-lcp-image].details.headings[2].label",
               "audits[legacy-javascript].details.headings[2].label"
             ],
             "core/audits/csp-xss.js | title": [
@@ -7436,8 +7436,8 @@
             "node_modules/lighthouse-stack-packs/packs/next.js.js | user-timings": [
               "stackPacks[1].descriptions[user-timings]"
             ],
-            "node_modules/lighthouse-stack-packs/packs/next.js.js | preload-lcp-image": [
-              "stackPacks[1].descriptions[preload-lcp-image]"
+            "node_modules/lighthouse-stack-packs/packs/next.js.js | prioritize-lcp-image": [
+              "stackPacks[1].descriptions[prioritize-lcp-image]"
             ],
             "node_modules/lighthouse-stack-packs/packs/next.js.js | unsized-images": [
               "stackPacks[1].descriptions[unsized-images]"
@@ -13895,7 +13895,7 @@
               "uses-text-compression": "Enable compression on your Next.js server. [Learn more](https://nextjs.org/docs/api-reference/next.config.js/compression).",
               "uses-responsive-images": "Use the `next/image` component to set the appropriate `sizes`. [Learn more](https://nextjs.org/docs/api-reference/next/image#sizes).",
               "user-timings": "Consider using `Next.js Analytics` to measure your app's real-world performance. [Learn more](https://nextjs.org/docs/advanced-features/measuring-performance).",
-              "preload-lcp-image": "Use the `next/image` component and set \"priority\" to true to preload LCP image. [Learn more](https://nextjs.org/docs/api-reference/next/image#priority).",
+              "prioritize-lcp-image": "Use the `next/image` component and set \"priority\" to true to preload LCP image. [Learn more](https://nextjs.org/docs/api-reference/next/image#priority).",
               "unsized-images": "Use the `next/image` component to make sure images are always sized appropriately. [Learn more](https://nextjs.org/docs/api-reference/next/image#width)."
             }
           }
@@ -15785,8 +15785,8 @@
             "node_modules/lighthouse-stack-packs/packs/next.js.js | user-timings": [
               "stackPacks[1].descriptions[user-timings]"
             ],
-            "node_modules/lighthouse-stack-packs/packs/next.js.js | preload-lcp-image": [
-              "stackPacks[1].descriptions[preload-lcp-image]"
+            "node_modules/lighthouse-stack-packs/packs/next.js.js | prioritize-lcp-image": [
+              "stackPacks[1].descriptions[prioritize-lcp-image]"
             ],
             "node_modules/lighthouse-stack-packs/packs/next.js.js | unsized-images": [
               "stackPacks[1].descriptions[unsized-images]"
@@ -17439,8 +17439,8 @@
               "items": []
             }
           },
-          "preload-lcp-image": {
-            "id": "preload-lcp-image",
+          "prioritize-lcp-image": {
+            "id": "prioritize-lcp-image",
             "title": "Preload Largest Contentful Paint image",
             "description": "If the LCP element is dynamically added to the page, you should preload the image in order to improve LCP. [Learn more about preloading LCP elements](https://web.dev/optimize-lcp/#optimize-when-the-resource-is-discovered).",
             "score": 1,
@@ -19135,7 +19135,7 @@
                   "unminified-css",
                   "unused-css-rules",
                   "largest-contentful-paint-element",
-                  "preload-lcp-image",
+                  "prioritize-lcp-image",
                   "unused-javascript",
                   "efficient-animated-content",
                   "total-byte-weight",
@@ -19262,7 +19262,7 @@
                 "weight": 0
               },
               {
-                "id": "preload-lcp-image",
+                "id": "prioritize-lcp-image",
                 "weight": 0
               },
               {
@@ -20032,7 +20032,7 @@
               "uses-text-compression": "Enable compression on your Next.js server. [Learn more](https://nextjs.org/docs/api-reference/next.config.js/compression).",
               "uses-responsive-images": "Use the `next/image` component to set the appropriate `sizes`. [Learn more](https://nextjs.org/docs/api-reference/next/image#sizes).",
               "user-timings": "Consider using `Next.js Analytics` to measure your app's real-world performance. [Learn more](https://nextjs.org/docs/advanced-features/measuring-performance).",
-              "preload-lcp-image": "Use the `next/image` component and set \"priority\" to true to preload LCP image. [Learn more](https://nextjs.org/docs/api-reference/next/image#priority).",
+              "prioritize-lcp-image": "Use the `next/image` component and set \"priority\" to true to preload LCP image. [Learn more](https://nextjs.org/docs/api-reference/next/image#priority).",
               "unsized-images": "Use the `next/image` component to make sure images are always sized appropriately. [Learn more](https://nextjs.org/docs/api-reference/next/image#width)."
             }
           }
@@ -21155,7 +21155,7 @@
             },
             {
               "startTime": 109,
-              "name": "lh:audit:preload-lcp-image",
+              "name": "lh:audit:prioritize-lcp-image",
               "duration": 1,
               "entryType": "measure"
             },
@@ -22066,7 +22066,7 @@
               "audits[network-server-latency].details.headings[0].label",
               "audits[long-tasks].details.headings[0].label",
               "audits[unsized-images].details.headings[1].label",
-              "audits[preload-lcp-image].details.headings[1].label",
+              "audits[prioritize-lcp-image].details.headings[1].label",
               "audits[total-byte-weight].details.headings[0].label",
               "audits[modern-image-formats].details.headings[1].label",
               "audits[uses-responsive-images].details.headings[1].label",
@@ -22407,14 +22407,14 @@
             "core/audits/valid-source-maps.js | description": [
               "audits[valid-source-maps].description"
             ],
-            "core/audits/preload-lcp-image.js | title": [
-              "audits[preload-lcp-image].title"
+            "core/audits/prioritize-lcp-image.js | title": [
+              "audits[prioritize-lcp-image].title"
             ],
-            "core/audits/preload-lcp-image.js | description": [
-              "audits[preload-lcp-image].description"
+            "core/audits/prioritize-lcp-image.js | description": [
+              "audits[prioritize-lcp-image].description"
             ],
             "core/lib/i18n/i18n.js | columnWastedBytes": [
-              "audits[preload-lcp-image].details.headings[2].label",
+              "audits[prioritize-lcp-image].details.headings[2].label",
               "audits[modern-image-formats].details.headings[3].label",
               "audits[uses-responsive-images].details.headings[3].label",
               "audits[legacy-javascript].details.headings[2].label"
@@ -23242,8 +23242,8 @@
             "node_modules/lighthouse-stack-packs/packs/next.js.js | user-timings": [
               "stackPacks[1].descriptions[user-timings]"
             ],
-            "node_modules/lighthouse-stack-packs/packs/next.js.js | preload-lcp-image": [
-              "stackPacks[1].descriptions[preload-lcp-image]"
+            "node_modules/lighthouse-stack-packs/packs/next.js.js | prioritize-lcp-image": [
+              "stackPacks[1].descriptions[prioritize-lcp-image]"
             ],
             "node_modules/lighthouse-stack-packs/packs/next.js.js | unsized-images": [
               "stackPacks[1].descriptions[unsized-images]"
