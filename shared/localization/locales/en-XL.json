@@ -3047,6 +3047,9 @@
   "report/renderer/report-utils.js | expandView": {
     "message": "Êx́p̂án̂d́ v̂íêẃ"
   },
+  "report/renderer/report-utils.js | firstPartyChipLabel": {
+    "message": "1ŝt́ p̂ár̂t́ŷ"
+  },
   "report/renderer/report-utils.js | footerIssue": {
     "message": "F̂íl̂é âń îśŝúê"
   },
@@ -3064,6 +3067,9 @@
   },
   "report/renderer/report-utils.js | notApplicableAuditsGroupTitle": {
     "message": "N̂ót̂ áp̂ṕl̂íĉáb̂ĺê"
+  },
+  "report/renderer/report-utils.js | openInANewTabTooltip": {
+    "message": "Ôṕêń îń â ńêẃ t̂áb̂"
   },
   "report/renderer/report-utils.js | opportunityResourceColumnLabel": {
     "message": "Ôṕp̂ór̂t́ûńît́ŷ"
@@ -3142,6 +3148,9 @@
   },
   "report/renderer/report-utils.js | toplevelWarningsMessage": {
     "message": "T̂h́êŕê ẃêŕê íŝśûéŝ áf̂f́êćt̂ín̂ǵ t̂h́îś r̂ún̂ óf̂ Ĺîǵĥt́ĥóûśê:"
+  },
+  "report/renderer/report-utils.js | unattributable": {
+    "message": "Ûńât́t̂ŕîb́ût́âb́l̂é"
   },
   "report/renderer/report-utils.js | varianceDisclaimer": {
     "message": "V̂ál̂úêś âŕê éŝt́îḿât́êd́ âńd̂ ḿâý v̂ár̂ý. T̂h́ê [ṕêŕf̂ór̂ḿâńĉé ŝćôŕê íŝ ćâĺĉúl̂át̂éd̂](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/) d́îŕêćt̂ĺŷ f́r̂óm̂ t́ĥéŝé m̂ét̂ŕîćŝ."
